@@ -1,0 +1,29 @@
+#!/bin/bash
+# Hook pre-commit to create a commitInfo.txt file with timestamp if user agrees
+# Place this file in .git/hooks/ and name it 'pre-commit'
+
+# Path relative to the repository root for the commitInfo.txt file
+INFO_PATH=suivi
+INFO_FILE=$INFO_PATH/commitInfo.txt
+
+# Ensure the suivi directory exists
+mkdir -p $INFO_PATH
+
+# Prompt user for confirmation
+read -p "Générer le fichier commitInfo.txt pour ce commit (y/[n]) ? " yn < /dev/tty
+yn=${yn:-n}
+
+case $yn in
+    [Yy]* )
+        # Generate the commit message with current date and time
+        echo "commit vérifié le $(date '+%Y-%m-%d %H:%M:%S')" > $INFO_FILE
+        # Add the file to the commit
+        git add $INFO_FILE
+        exit 0
+        ;;
+    [Nn]* )
+        exit 0
+        ;;
+esac
+
+exit 0
