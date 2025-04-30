@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #6b7280, #4b5563);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+header h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.logos {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.logos img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.logos img:hover {
+    transform: scale(1.1);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    border-left: 5px solid #fc6d26; /* GitLab orange */
+}
+
+h1 {
+    color: #1f2937;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+p {
+    color: #4b5563;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    header h2 {
+        font-size: 1.2em;
+    }
+
+    .logos img {
+        width: 30px;
+        height: 30px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
