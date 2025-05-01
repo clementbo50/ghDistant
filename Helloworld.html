@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +9,19 @@
 <body>
     <header>
         <h2>Git avancé – GitHub et GitLab</h2>
-        <div class="logos">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git Logo">
-            <img src="https://about.gitlab.com/images/press/logo/svg/gitlab-logo-200.svg" alt="GitLab Logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo">
+        <div class="logos" style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git Logo" style="width: 80px; height: auto;">
+            <img src="https://about.gitlab.com/images/press/logo/svg/gitlab-logo-200.svg" alt="GitLab Logo" style="width: 80px; height: auto;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" style="width: 80px; height: auto;">
         </div>
     </header>
 
     <main>
         <section>
-            <h1>Hello World</h1>
-            <p>Welcome to the world of web development!</p>
+            <!-- Le contenu html est géré par le script js HelloWorld-->
+            <h1>Message HelloWorld</h1>
+            <p>Message introduction</p>
+            <label style="background-color: #f0f0f0; padding: 5px 10px; border-radius: 5px; font-weight: bold; display: inline-block;">date</label>
             <p>C20 : Let's edit from Github ! </p>
         </section>
 
@@ -30,8 +32,7 @@
             <p>Pour plus d'informations, consultez la <a href="https://git-scm.com/doc">documentation officielle de Git</a>.</p>
         </section>
     </main>
-    
+    <script src="public/js/HelloWorld.js"></script>
 </body>
-<script src="public/js/HelloWorld.js"></script>
 
 </html>
